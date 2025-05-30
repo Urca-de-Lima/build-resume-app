@@ -15,7 +15,7 @@ function HomePage() {
           <button
             className="create-new-button"
             type="button"
-            onClick={() => navigate('/new-page')}
+            onClick={() => navigate('/new-resume')}
           >
             Start a new resume?
           </button>
@@ -24,13 +24,18 @@ function HomePage() {
             type="button"
             onClick={() => navigate('/data-model-test')}
           >Data Model Test</button>
+          <button
+            className="create-new-button"
+            type="button"
+            onClick={()}>
+          </button>
         </div>
       </header>
     </div>
   );
 }
 
-function NewPage() {
+function NewResume() {
   return (
     <div className='App'>
       <header className='App-header'>
@@ -67,7 +72,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/new-page" element={<NewPage />} />
+        <Route path="/new-resume" element={<NewResume />} />
         <Route path="/data-model-test" element={<DataModelTest />} />
         {/* Add more routes as needed */}
       </Routes>
