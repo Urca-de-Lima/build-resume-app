@@ -1,0 +1,18 @@
+.h5-margin {
+  margin: 10px 0px; /* margin for h5 elements */
+}
+.resume-section-headers {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.save-button {
+  background-color: #61dafb; /* button background color */
+  color: white;              /* button text color */
+  border: none;                /* no border */
+  padding: 20px 40px;          /* padding for the button */
+  font-size: 16px;             /* font size */
+  cursor: pointer;             /* pointer cursor on hover */
+  border-radius: 5px;          /* rounded corners */
+  transition: background-color 0.3s ease; /* smooth background color transition */
+}

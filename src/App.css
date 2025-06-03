@@ -30,42 +30,6 @@
   color: #61dafb;
 }
 
-.button-row {
-  display: flex;
-  gap: 16px; /* space between buttons */
-}
-
-.create-new-button {
-  background-color: #ca61fb; /* button background color */
-  color: white;              /* button text color */
-  border: none;                /* no border */
-  padding: 20px 40px;          /* padding for the button */
-  font-size: 16px;             /* font size */
-  cursor: pointer;             /* pointer cursor on hover */
-  border-radius: 5px;          /* rounded corners */
-  transition: background-color 0.3s ease; /* smooth background color transition */
-}
-
-.create-new-button:hover {
-  background-color: #b74ce9; /* darker shade on hover */
-}
-
-.resume-section-headers {
-  text-align: left;
-  margin-bottom: 20px;
-}
-
-.save-button {
-  background-color: #61dafb; /* button background color */
-  color: white;              /* button text color */
-  border: none;                /* no border */
-  padding: 20px 40px;          /* padding for the button */
-  font-size: 16px;             /* font size */
-  cursor: pointer;             /* pointer cursor on hover */
-  border-radius: 5px;          /* rounded corners */
-  transition: background-color 0.3s ease; /* smooth background color transition */
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
