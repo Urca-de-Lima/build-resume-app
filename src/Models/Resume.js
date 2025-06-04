@@ -33,4 +33,5 @@ class Resume {
     this.name = name; // Name one the resume
   }
 }
+
 export default Resume;

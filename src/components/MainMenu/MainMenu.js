@@ -10,7 +10,12 @@ import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-route
 import NewResume from '../CreateNewResume/NewResume';
 import DataModelTest from '../DataModelTest/DataModelTest';
 import SavedResumesModal from '../../Modals/SaveResumes/SavedResumesModal';
+import SavedResume from '../../Models/SavedResume';
+import ResumePage from '../LoadSavedResume/LoadSavedResume';
 import './MainMenu.css';
+
+//console.log(`Saved Resume from MainMenu.js: ${SavedResume}`);
+console.log(`Saved Resume from MainMenu.js type: ${typeof SavedResume}`);
 
 function HomePage() {
   const navigate = useNavigate();
@@ -37,7 +42,7 @@ function HomePage() {
         className="main-menu-button"
         type="button"
         onClick={(openModal)}
-      >Open Modal
+      >Work on an old one?
       </button>
       <SavedResumesModal isOpen={isOpen} onRequestClose={closeModal} />
     </div>
@@ -51,6 +56,7 @@ function MainMenu() {
         <Route path="/" element={<HomePage />} />
         <Route path="/new-resume" element={<NewResume />} />
         <Route path="/data-model-test" element={<DataModelTest />} />
+        <Route path="/resumes/:resumeId" element={<ResumePage />} />
         {/* Add more routes as needed */}
       </Routes>
     </Router>
