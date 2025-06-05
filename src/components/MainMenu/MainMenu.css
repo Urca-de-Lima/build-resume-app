@@ -1,3 +1,7 @@
+/*
+* MainMenu.css
+* Styles for the Main Menu component
+*/
 .button-row {
   display: flex;
   gap: 16px; /* space between buttons */

@@ -10,12 +10,8 @@ import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-route
 import NewResume from '../CreateNewResume/NewResume';
 import DataModelTest from '../DataModelTest/DataModelTest';
 import SavedResumesModal from '../../Modals/SaveResumes/SavedResumesModal';
-import SavedResume from '../../Models/SavedResume';
 import ResumePage from '../LoadSavedResume/LoadSavedResume';
 import './MainMenu.css';
-
-//console.log(`Saved Resume from MainMenu.js: ${SavedResume}`);
-console.log(`Saved Resume from MainMenu.js type: ${typeof SavedResume}`);
 
 function HomePage() {
   const navigate = useNavigate();

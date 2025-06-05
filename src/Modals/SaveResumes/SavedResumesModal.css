@@ -1,3 +1,15 @@
+/*
+* SavedResumesModal.css
+* Styles for the Saved Resumes Modal component
+*/
+.center-listings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack items vertically */
+  /*gap: 5px; *//* Space between items */
+}
+
 .close-button {
   background-color: #fb6161; /* button background color */
   color: white;              /* button text color */
