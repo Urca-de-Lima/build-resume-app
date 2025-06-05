@@ -29,8 +29,36 @@ class Resume {
 }
 */
 class Resume {
-  constructor(name='') {
-    this.name = name; // Name one the resume
+  constructor(data) {
+    this.name = data.name; // Name on the resume
+    this.address = new Address(data.address || {}); // Address object
+    this.experience = data.experience.map(exp => new Experience(exp)); // Array of Experience objects
+  }
+}
+
+class Address {
+  constructor(address) {
+    this.street = address.street || ''; // Street address
+    this.city = address.city || ''; // City
+    this.state = address.state || ''; // State
+    this.zip = address.zip || ''; // Zip code
+  }
+}
+
+class Experience {
+  //constructor(jobTitle, company, startDate, endDate, responsibilities = []) {
+  constructor(experience) {
+    this.jobTitle = experience.jobTitle || ''; // Job title
+    this.company = experience.company || ''; // Company name
+    this.startDate = experience.startDate; // Start date of employment
+    this.endDate = experience.endDate; // End date of employment
+    this.responsibilities = experience.responsibilities.map(res => new Responsibility(res)); // Array of responsibilities
+  }
+}
+
+class Responsibility {
+  constructor(description) {
+    this.description = description; // Description of the responsibility
   }
 }
 

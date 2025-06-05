@@ -11,6 +11,8 @@ import './SavedResumesModal.css'; // Import your CSS for styling the modal
 
 Modal.setAppElement('#root'); // Set the app element for accessibility
 
+const savesdb = '/data/saves.json'; // Path to your JSON file containing saved resumes
+
 const SavedResumesModal = ({ isOpen, onRequestClose }) => {
   //if (!isOpen) return null; // Don't render the modal if it's not open
   const [saves, setSaves] = useState([]);
@@ -19,7 +21,7 @@ const SavedResumesModal = ({ isOpen, onRequestClose }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/data/saves.json'); // Adjust the path to your JSON file
+        const response = await fetch(savesdb);
         const data = await response.json();
 
         setSaves(data);
@@ -31,7 +33,13 @@ const SavedResumesModal = ({ isOpen, onRequestClose }) => {
     fetchData();
   }, []);
 
+  // Function to handle navigation when a resume is selected
   const handleNavigate = (route) => {
+    // TODO:
+    // Once I have the name/ID of the resume, call another fetch to get the resume data
+    // and then navigate to the appropriate route.
+    console.log(`Navigating to resume: ${route}`);
+    // Assuming the route is the name of the resume file, e.g., "resume1.json"
     navigate(`/resumes/${route}`); // Navigate to the specified route
     onRequestClose(); // Close the modal after navigation
   }

@@ -1,3 +1,33 @@
 {
-    "name": "Brad Davis"
+  "name": "Brad Davis",
+  "address": {
+    "street": "123 Main St",
+    "city": "Springfield",
+    "state": "IL",
+    "zip": "62701"
+  },
+  "experience": [
+    {
+      "jobTitle": "Software Engineer",
+      "company": "Tech Solutions Inc.",
+      "startDate": "2019-01-01",
+      "endDate": "2021-12-31",
+      "responsibilities": [
+        "Developed web applications using React and Node.js",
+        "Collaborated with cross-functional teams to define project requirements",
+        "Implemented RESTful APIs and integrated third-party services"
+      ]
+    },
+    {
+      "jobTitle": "Junior Developer",
+      "company": "Web Innovations LLC",
+      "startDate": "2017-06-01",
+      "endDate": "2018-12-31",
+      "responsibilities": [
+        "Assisted in the development of e-commerce platforms",
+        "Performed code reviews and debugging",
+        "Participated in Agile ceremonies and sprint planning"
+      ]
+    }
+  ]
 }
