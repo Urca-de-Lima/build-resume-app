@@ -12,7 +12,6 @@ import MaterialTitlePanel from '../SideBar/MaterialTitlePanel';
 import SidebarContent from '../SideBar/SidebarContent';
 import NewResume from '../CreateNewResume/NewResume';
 import DataModelTest from '../DataModelTest/DataModelTest';
-import SavedResumesModal from '../../Modals/SaveResumes/SavedResumesModal';
 import ResumePage from '../LoadSavedResume/LoadSavedResume';
 import './MainMenu.css';
 
@@ -84,15 +83,14 @@ function HomePage() {
   const contentHeader = (
     <span>
       {!sidebarState.docked && (
-        <a
+        <img
+          src="/menu-bar-icon-white-clipart-png.png"
+          alt="Menu"
+          style={{ cursor: "pointer", width: 30, height: 30 }}
           onClick={menuButtonClick}
-          href="#"
-          style={styles.contentHeaderMenuLink}
-        >
-          =
-        </a>
+        />
       )}
-      <span> React Sidebar</span>
+      <span> Resume Editor</span>
     </span>
   );
 
@@ -116,45 +114,7 @@ function HomePage() {
   const [isOpen, setIsOpen] = useState(false);
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
-/*
-  const contentHeader = (
-    <span>
-      {!sidebarOpen && (
-        <a
-          onClick={this.menuButtonClick}
-          href="#"
-          style={styles.contentHeaderMenuLink}
-        >
-          =
-        </a>
-      )}
-      <span> React Sidebar</span>
-    </span>
-  );*/
-  /*
-  return (
-    <div className="button-row">
-      <button
-        className="main-menu-button"
-        type="button"
-        onClick={() => navigate('/new-resume')}
-      >Start a new resume?
-      </button>
-      <button
-        className="main-menu-button"
-        type="button"
-        onClick={() => navigate('/data-model-test')}
-      >Data Model Test
-      </button>
-      <button
-        className="main-menu-button"
-        type="button"
-        onClick={(openModal)}
-      >Work on an old one?
-      </button>
-      <SavedResumesModal isOpen={isOpen} onRequestClose={closeModal} />
-    </div>
-  );*/
+
   return (
     <Sidebar {...sidebarProps}>
       <MaterialTitlePanel title={contentHeader}>

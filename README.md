@@ -71,3 +71,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Copilot Vscode Features
 https://code.visualstudio.com/docs/copilot/reference/copilot-vscode-features
+
+### react-sidebar documentation:
+https://github.com/balloob/react-sidebar/
+
+### react-sidebar example:
+https://paulusschoutsen.nl/react-sidebar/example/

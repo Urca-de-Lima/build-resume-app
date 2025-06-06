@@ -1,41 +1,26 @@
 import React from 'react';
-import MainMenu from './components/MainMenu/MainMenu'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Layout from './components/Layout/Layout';
+import HomePage from './components/Home/HomePage';
+import NewResume from './components/CreateNewResume/NewResume';
+import DataModelTest from './components/DataModelTest/DataModelTest';
+import ResumePage from './components/LoadSavedResume/LoadSavedResume';
 import './App.css';
 
 function App() {
-/*
   return (
-    <div className="App">
-      <header className="App-header">
-        <MainMenu />
-      </header>
-    </div>
-  );*/
-  return (
-    <div>
-      <MainMenu />
-    </div>
+    <Router>
+      <Routes>
+        <Route element={<Layout />}> {/* Sidebar should appear on each page */}
+          <Route path="/" element={<HomePage />} />
+          <Route path="/new-resume" element={<NewResume />} />
+          <Route path="/data-model-test" element={<DataModelTest />} />
+          <Route path="/resumes/:resumeId" element={<ResumePage />} />
+          {/* Add more routes as needed */}
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
-
-/* eslint-disable react/jsx-filename-extension */
-    /* original function App
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-    */

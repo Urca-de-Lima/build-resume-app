@@ -34,7 +34,7 @@ const SidebarContent = props => {
 
   for (let ind = 0; ind < 10; ind++) {
     links.push(
-      <a key={ind} href="#" style={styles.sidebarLink}>
+      <a key={ind} href="/new-resume" style={styles.sidebarLink}>
         Mock menu item {ind}
       </a>
     );
@@ -46,10 +46,10 @@ const SidebarContent = props => {
         <a href="/" style={styles.sidebarLink}>
           Home
         </a>
-        <a href="responsive_example.html" style={styles.sidebarLink}>
-          Responsive Example
-        </a>
         <div style={styles.divider} />
+        <a href="/new-resume" style={styles.sidebarLink}>
+            Start a new resume?
+        </a>
         {links}
       </div>
     </MaterialTitlePanel>
