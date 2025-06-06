@@ -1,3 +1,9 @@
+/* Set global variables */
+:root {
+  --primary-color: #ca61fb;
+  --primary-color-hover: #b74ce9;
+}
+
 .App {
   text-align: center;
 }
