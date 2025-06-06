@@ -1,12 +1,8 @@
-import React, { useState } from 'react';
-import Sidebar from 'react-sidebar';
+import React from 'react';
 import MainMenu from './components/MainMenu/MainMenu'
 import './App.css';
 
 function App() {
-  // Use the useState hook to manage the sidebarOpen state
-  const [sidebarOpen, setSidebarOpen] = useState(true);
-
 /*
   return (
     <div className="App">
@@ -16,17 +12,10 @@ function App() {
     </div>
   );*/
   return (
-    <Sidebar
-      sidebar={<b>Sidebar content</b>}
-      open={sidebarOpen}
-      onSetOpen={setSidebarOpen}
-      styles={{ sidebar: { background: "white" } }}
-    >
-      <button onClick={() => setSidebarOpen(true)}>
-        Open sidebar
-      </button>
-    </Sidebar>
-  )
+    <div>
+      <MainMenu />
+    </div>
+  );
 }
 
 export default App;
