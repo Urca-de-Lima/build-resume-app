@@ -29,6 +29,7 @@ const ResumePage = () => {
   return (
     <div>
       <h1>Resume: {resumeId}</h1>
+      <input type="text" className="styled-input" placeholder="Enter your text here..." />
       <p>{resumeData ? resumeData.name : "Loading..."}</p>
       <p>{resumeData ? resumeData.address.street : "Loading..."}</p>
       <h2>Experience</h2>
