@@ -4,8 +4,8 @@ const HomePage = () => {
   return (
     <div>
       <p>
-        React Sidebar is a sidebar component for React. It offers the
-        following features:
+        Welcome to your personal resume editor.
+        How would you like to get started?
       </p>
       <ul>
         <li>Have the sidebar slide over main content</li>
