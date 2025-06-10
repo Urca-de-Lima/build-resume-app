@@ -26,10 +26,27 @@ const ResumePage = () => {
     fetchResume();
   }, [resumeId]);
 
+  const handleInputChange = (event) => {
+    setResumeData(event.target.value); // Update state on input change
+  }
+
   return (
     <div>
       <h1>Resume: {resumeId}</h1>
-      <input type="text" className="styled-input" placeholder="Enter your text here..." />
+      {/* input test */}
+      <div className="input-container">
+        <input
+          className="styled-input"
+          type="text"
+          value={resumeData.name}
+          onChange={handleInputChange}
+          placeholder="Enter your text here..." />
+      </div>
+      {/* input with label test */}
+      <div class="input-container">
+        <label className="styled-label-2" for="name">Your Name</label>
+        <input className="styled-input-2" type="text" id="name" required />
+      </div>
       <p>{resumeData ? resumeData.name : "Loading..."}</p>
       <p>{resumeData ? resumeData.address.street : "Loading..."}</p>
       <h2>Experience</h2>

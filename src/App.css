@@ -1,8 +1,4 @@
-/* Set global variables */
-:root {
-  --primary-color: #ca61fb;
-  --primary-color-hover: #b74ce9;
-}
+@import './variables.css';
 
 .App {
   text-align: center;
@@ -50,6 +46,13 @@
   gap: 16px; /* space between buttons */
 }
 
+.input-container {
+  max-width: fit-content; /* trying to ensure the input doesn't stretch too wide */
+  overflow: hidden; /* prevent overflow */
+  position: relative;
+  margin: 10px;
+}
+
 .styled-input {
     width: 100%;
     padding: 12px 20px;
@@ -58,6 +61,7 @@
     font-size: 16px;
     transition: border-color 0.3s, box-shadow 0.3s;
     outline: none;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
 }
 
 .styled-input::placeholder {
@@ -69,3 +73,34 @@
     border-color: var(--primary-color); /*#007BFF -- Change to your desired color */
     box-shadow: 0 0 5px var(--primary-color-hover); /* 0 0 5px rgba(0, 123, 255, 0.5); -- Subtle shadow effect */
 }
+
+.styled-input-2 {
+  padding: 10px;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.styled-input-2:focus {
+  border-color: var(--primary-color-hover); /* Change border color on focus */
+}
+
+.styled-label-2 {
+  margin-right: 10px; /* Space between label and input */
+  color: white; /* Label color */
+  font-size: 16px; /* Label font size */
+  background-color: var(--primary-color); /* Background color for the label */
+  padding: 10px;
+  border-radius: 5px;
+  border-color: var(--primary-color-hover);
+}
+/*
+.styled-input-2:focus + .styled-label-2,
+.styled-input-2:not(:placeholder-shown) + .styled-label-2 {
+  top: -10px;
+  left: 10px;
+  color: #2ecc71; /* Change label color on focus *//*
+  font-size: 12px;
+}*/
