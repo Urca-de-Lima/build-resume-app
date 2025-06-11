@@ -44,6 +44,7 @@
 .button-row {
   display: flex;
   gap: 16px; /* space between buttons */
+  justify-content: center;
 }
 
 .input-container {
@@ -51,6 +52,58 @@
   overflow: hidden; /* prevent overflow */
   position: relative;
   margin: 10px;
+}
+
+.input-container-2 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px; /* Space between input fields */
+}
+
+.input-label-2 {
+  margin-bottom: 8px; /* Space between label and input */
+  font-size: 16px;
+  color: #333; /* Label color */
+}
+
+.styled-input-3 {
+  padding: 12px 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px; /* Rounded corners */
+  font-size: 16px;
+  transition: border-color 0.3s;
+  outline: none;
+}
+
+.styled-input-3:focus {
+  border-color: #007BFF; /* Change border color on focus */
+}
+
+.inset-border {
+  position: relative;
+  padding: 20px;
+  background-color: var(--primary-color); /* Background color of the content */
+  border-radius: 15px; /* Rounded corners */
+  overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
+}
+
+.inset-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 15px; /* Match the border radius */
+  background-color: rgba(0, 0, 0, 0.1); /* Light shadow effect */
+  z-index: -1; /* Place behind the content */
+}
+
+.inset-shadow {
+    padding: 20px;
+    background-color: white; /* Background color of the content */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); /* Inset shadow effect */
 }
 
 .styled-input {
@@ -104,3 +157,37 @@
   color: #2ecc71; /* Change label color on focus *//*
   font-size: 12px;
 }*/
+
+.matui-input-container {
+  position: relative;
+  margin-bottom: 20px; /* Space between input fields */
+}
+
+.matui-input {
+  padding: 12px 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px; /* Rounded corners */
+  font-size: 16px;
+  width: 100%; /* Full width */
+  outline: none;
+}
+
+.matui-input-label {
+  position: absolute;
+  left: 16px; /* Position inside the input */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  background-color: white; /* Match the input background */
+  padding: 0 4px; /* Padding to create space around the text */
+  color: #999; /* Label color */
+  transition: 0.2s ease all; /* Smooth transition */
+}
+
+/* Focus effect */
+.matui-input:focus + .matui-input-label,
+.matui-input:not(:placeholder-shown) + .matui-input-label {
+  top: 0px; /* Move label up */
+  left: 25px; /* Adjust left position */
+  font-size: 12px; /* Smaller font size */
+  color: #007BFF; /* Change color on focus */
+}

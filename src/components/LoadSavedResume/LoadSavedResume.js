@@ -32,21 +32,41 @@ const ResumePage = () => {
 
   return (
     <div>
-      <h1>Resume: {resumeId}</h1>
+      <h1>Working on: {resumeId}</h1>
       {/* input test */}
       <div className="input-container">
-        <input
+        {/*<input
           className="styled-input"
+          type="text"
+          value={resumeData ? resumeData.name : "Loading..."}
+          onChange={handleInputChange}
+          placeholder="Enter your text here..." />*/}
+      </div>
+      {/* input with label test */}
+      <div className="input-container">
+        <label className="styled-label-2" htmlFor="name">Your Name</label>
+        <input className="styled-input-2" type="text" id="name" required />
+      </div>
+      {/* label test */}
+      <div className="input-container-2">
+        <label htmlFor="name" className="input-label-2">
+          My Name
+        </label>
+        {/*<input
+          id="name"
           type="text"
           value={resumeData.name}
           onChange={handleInputChange}
-          placeholder="Enter your text here..." />
+          placeholder="Enter your text here..."
+          className="styled-input-3"
+        />*/}
       </div>
-      {/* input with label test */}
-      <div class="input-container">
-        <label className="styled-label-2" for="name">Your Name</label>
-        <input className="styled-input-2" type="text" id="name" required />
+      {/* another test */}
+      <div className="matui-input-container">
+        <input className="matui-input" type="text" id="input" required />
+        <label for="input" className="matui-input-label">Your Label</label>
       </div>
+      {/* DATA */}
       <p>{resumeData ? resumeData.name : "Loading..."}</p>
       <p>{resumeData ? resumeData.address.street : "Loading..."}</p>
       <h2>Experience</h2>

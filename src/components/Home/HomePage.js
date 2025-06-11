@@ -10,8 +10,8 @@ const HomePage = () => {
   const closeModal = () => setIsOpen(false);
 
   return (
-    <div>
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', fontSize: 'calc(10px + 2vmin)', textAlign: 'center' }}>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <div style={{ alignItems: 'center', fontSize: 'calc(10px + 2vmin)', textAlign: 'center' }}>
       <p>
         Welcome to your personal resume editor.
       </p>
